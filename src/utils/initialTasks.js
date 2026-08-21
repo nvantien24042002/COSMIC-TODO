@@ -1,0 +1,86 @@
+export const CATEGORIES = [
+  { id: 'all', label: 'Tất cả', icon: '🌌', color: 'cyan' },
+  { id: 'work', label: 'Dự án & Công việc', icon: '🚀', color: 'purple' },
+  { id: 'personal', label: 'Cá nhân & Thói quen', icon: '🛸', color: 'pink' },
+  { id: 'study', label: 'Học tập & Nghiên cứu', icon: '🛰️', color: 'blue' },
+  { id: 'health', label: 'Sức khỏe & Rèn luyện', icon: '🪐', color: 'emerald' },
+  { id: 'urgent', label: 'Khẩn cấp', icon: '⚡', color: 'gold' },
+];
+
+export const PRIORITIES = {
+  critical: {
+    id: 'critical',
+    label: 'Tối cao (Cosmic Nova)',
+    shortLabel: 'Tối cao',
+    color: 'border-rose-500/50 text-rose-400 bg-rose-500/10 shadow-[0_0_12px_rgba(244,63,94,0.3)]',
+    dotColor: 'bg-rose-500',
+    rank: 4,
+  },
+  high: {
+    id: 'high',
+    label: 'Cao (High Orbit)',
+    shortLabel: 'Cao',
+    color: 'border-amber-500/50 text-amber-400 bg-amber-500/10 shadow-[0_0_12px_rgba(245,158,11,0.25)]',
+    dotColor: 'bg-amber-400',
+    rank: 3,
+  },
+  medium: {
+    id: 'medium',
+    label: 'Bình thường (Mid Orbit)',
+    shortLabel: 'Bình thường',
+    color: 'border-cyan-500/50 text-cyan-400 bg-cyan-500/10 shadow-[0_0_12px_rgba(6,182,212,0.2)]',
+    dotColor: 'bg-cyan-400',
+    rank: 2,
+  },
+  low: {
+    id: 'low',
+    label: 'Thấp (Low Orbit)',
+    shortLabel: 'Thấp',
+    color: 'border-slate-500/40 text-slate-400 bg-slate-500/10',
+    dotColor: 'bg-slate-400',
+    rank: 1,
+  },
+};
+
+export const INITIAL_TASKS = [
+  {
+    id: 'task-1',
+    title: 'Khởi động động cơ Warp Drive & Kiểm tra năng lượng Tinh vân',
+    category: 'work',
+    priority: 'critical',
+    completed: false,
+    dueDate: new Date(Date.now() + 86400000).toISOString().split('T')[0],
+    notes: 'Đảm bảo buồng phản ứng phản vật chất đạt 99.8% hiệu suất trước khi nhảy vào siêu không gian.',
+    createdAt: new Date(Date.now() - 3600000 * 5).toISOString(),
+  },
+  {
+    id: 'task-2',
+    title: 'Hiệu chỉnh kính viễn vọng không gian James Webb 2.0',
+    category: 'study',
+    priority: 'high',
+    completed: false,
+    dueDate: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
+    notes: 'Thu thập quang phổ từ cụm thiên hà Andromeda và phân tích mật độ vật chất tối.',
+    createdAt: new Date(Date.now() - 3600000 * 12).toISOString(),
+  },
+  {
+    id: 'task-3',
+    title: '30 phút luyện tập thể lực trong môi trường không trọng lực',
+    category: 'health',
+    priority: 'medium',
+    completed: false,
+    dueDate: new Date().toISOString().split('T')[0],
+    notes: 'Duy trì mật độ xương và cơ bắp trong buồng ly tâm giả lập trọng lực.',
+    createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
+  },
+  {
+    id: 'task-4',
+    title: 'Cập nhật nhật ký hành trình trạm không gian ISS Alpha',
+    category: 'personal',
+    priority: 'low',
+    completed: true,
+    dueDate: new Date(Date.now() - 86400000).toISOString().split('T')[0],
+    notes: 'Đã hoàn thành gửi báo cáo về Trung tâm Điều khiển Mặt Đất lúc 08:00 UTC.',
+    createdAt: new Date(Date.now() - 3600000 * 48).toISOString(),
+  },
+];
